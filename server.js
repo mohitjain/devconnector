@@ -6,7 +6,6 @@ const PORT = process.env.PORT || 5000;
 
 // Init Middle Ware
 app.use(express.json({ extended: false }));
-
 // Connect Database
 connectDB();
 
