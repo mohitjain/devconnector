@@ -1,11 +1,13 @@
 const express = require('express');
 const connectDB = require('./config/db');
-
+const morgan = require('morgan');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Init Middle Ware
 app.use(express.json({ extended: false }));
+app.use(morgan('combined'));
+
 // Connect Database
 connectDB();
 
